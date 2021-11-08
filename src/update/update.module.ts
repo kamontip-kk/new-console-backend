@@ -12,9 +12,9 @@ import { MulterModule } from '@nestjs/platform-express';
     ConfigModule,
     TypeOrmModule.forFeature([UpdateRepository]),
     AuthModule,
-    MulterModule.register({
-      dest: './uploads',
-    }),
+    // MulterModule.register({
+    //   dest: './uploads',
+    // }),
   ],
   providers: [UpdateService],
   controllers: [UpdateController]

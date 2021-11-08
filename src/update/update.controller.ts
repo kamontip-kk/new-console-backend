@@ -28,7 +28,7 @@ import path = require('path');
 // })}
 
 
-// @UseGuards(JwtAuthGuard)
+@UseGuards(JwtAuthGuard)
 @Controller('update')
 export class UpdateController {
     constructor(
