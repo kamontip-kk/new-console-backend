@@ -12,6 +12,6 @@ export class User{
     @Column()
     password: string
 
-    @OneToMany((_type) => Update, (update) =>update.user, {eager:true})
-    updates: Update[];
+    // @OneToMany((_type) => Update, (update) =>update.user, {eager:true})
+    // updates: Update[];
 }

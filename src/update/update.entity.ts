@@ -22,6 +22,6 @@ export class Update{
     @Column()
     status: UpdateStatus
 
-    @ManyToOne((_type) => User, (user) => user.updates , {eager: false})
-    user: User
+    // @ManyToOne((_type) => User, (user) => user.updates , {eager: false})
+    // user: User
 }

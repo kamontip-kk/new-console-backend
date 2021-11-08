@@ -1,4 +1,5 @@
 // import { User } from "src/auth/user.entity";
+import { of } from "rxjs";
 import { EntityRepository, Repository } from "typeorm";
 import { AddUpdateDto } from "./dto/add-update.dto";
 import { GetUpdatesFilterDto } from "./dto/get-updates-filter.dto";
@@ -8,6 +9,8 @@ import { Update } from "./update.entity";
 @EntityRepository(Update)
 export class UpdateRepository extends Repository<Update>{
     async addUpdate(addUpdateDto:AddUpdateDto): Promise<Update>{
+
+        // const img = file;
         const {img, title, subtitle, url} = addUpdateDto;
 
         const update = this.create({
@@ -19,6 +22,8 @@ export class UpdateRepository extends Repository<Update>{
         })
 
         await this.save(update);
+        console.log(img);
+        
         return update;
     }
 
